@@ -1,6 +1,6 @@
 // Define AWS provider
 provider "aws" {
-  region = "us-west-1"  // Replace with your desired AWS region
+  region = "eu-west-1"  // Replace with your desired AWS region
   // Add access and secret key here if not using IAM roles
 }
 
@@ -23,7 +23,7 @@ resource "aws_globalaccelerator_listener" "example_listener" {
 // Define endpoint groups
 resource "aws_globalaccelerator_endpoint_group" "example_endpoint_group" {
   listener_arn      = aws_globalaccelerator_listener.example_listener.arn
-  endpoint_group_region = "us-west-2"  // Replace with your desired region
+  endpoint_group_region = "eu-west-1"  // Replace with your desired region
   endpoint_configuration {
     endpoint_id = "i-1234567890abcdef0"  // Replace with your EC2 instance ID or ENI ID
     weight      = 100
