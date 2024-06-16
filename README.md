@@ -1,7 +1,3 @@
-Sure! Here is the updated README without the Directory Structure section:
-
----
-
 # AWS Solution Architect
 
 This repository contains Terraform configurations for various AWS services. These configurations are designed to help AWS solution architects quickly set up and manage AWS infrastructure using Terraform.
