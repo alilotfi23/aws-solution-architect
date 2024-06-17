@@ -1,0 +1,10 @@
+region               = "us-east-1"
+cluster_name         = "my-memorydb-cluster"
+node_type            = "db.r6g.large"
+num_replicas         = 1
+num_shards           = 1
+subnet_ids           = ["subnet-0123456789abcdef0", "subnet-0987654321abcdef0"]
+security_group_ids   = ["sg-0123456789abcdef0"]
+parameter_group_name = "default.memorydb-redis6"
+snapshot_window      = "06:00-07:00"
+snapshot_retention_limit = 7

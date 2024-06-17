@@ -1,0 +1,7 @@
+region               = "eu-west-1"
+function_name        = "my-lambda-function"
+handler              = "index.handler"
+runtime              = "nodejs14.x"
+role_arn             = "arn:aws:iam::123456789012:role/service-role/MyLambdaRole"
+source_code_s3_bucket = "my-lambda-bucket"
+source_code_s3_key    = "my-lambda-code.zip"
