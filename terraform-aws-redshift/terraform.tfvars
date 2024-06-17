@@ -1,0 +1,13 @@
+region               = "eu-west-1"
+cluster_identifier   = "my-redshift-cluster"
+node_type            = "dc2.large"
+number_of_nodes      = 2
+master_username      = "admin"
+master_password      = "YourPassword123!"
+db_name              = "mydatabase"
+cluster_type         = "multi-node"
+port                 = 5439
+subnet_ids           = ["subnet-0123456789abcdef0", "subnet-0987654321abcdef0"]
+security_group_ids   = ["sg-0123456789abcdef0"]
+parameter_group_name = "my-redshift-parameter-group"
+iam_roles            = ["arn:aws:iam::123456789012:role/MyRedshiftRole"]
