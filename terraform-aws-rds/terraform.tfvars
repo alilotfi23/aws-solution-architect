@@ -1,0 +1,15 @@
+region                  = "eu-west-1"
+db_instance_identifier  = "my-rds-instance"
+allocated_storage       = 20
+engine                  = "mysql"
+engine_version          = "8.0.26"
+instance_class          = "db.t3.micro"
+username                = "admin"
+password                = "yourpassword"
+db_name                 = "mydatabase"
+publicly_accessible     = false
+subnet_group_name       = "my-db-subnet-group"
+vpc_security_group_ids  = ["sg-0123456789abcdef0"]
+parameter_group_name    = "default.mysql8.0"
+backup_retention_period = 7
+multi_az                = false
