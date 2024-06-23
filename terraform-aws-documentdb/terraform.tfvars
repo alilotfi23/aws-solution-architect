@@ -1,0 +1,11 @@
+region                  = "us-east-1"
+cluster_identifier      = "my-documentdb-cluster"
+instance_class          = "db.r5.large"
+master_username         = "admin"
+master_password         = "yourpassword"
+db_subnet_group_name    = "my-db-subnet-group"
+vpc_security_group_ids  = ["sg-0123456789abcdef0"]
+apply_immediately       = false
+backup_retention_period = 7
+preferred_backup_window = "07:00-09:00"
+preferred_maintenance_window = "sun:23:45-mon:00:15"
