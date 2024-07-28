@@ -20,8 +20,13 @@ To get started with these Terraform configurations, follow these steps:
    ```bash
    terraform init
    ```
-
-4. **Apply the configuration:**
+   
+4. **Run terraform plan:**
+   ```bash
+   terraform plan
+   ```
+   
+5. **Apply the configuration:**
    ```bash
    terraform apply
    ```
