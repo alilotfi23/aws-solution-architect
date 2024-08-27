@@ -1,6 +1,6 @@
 # AWS Solution Architect
 
-This repository contains Terraform configurations for various AWS services. These configurations are designed to help AWS solution architects quickly set up and manage AWS infrastructure using Terraform. Services covered include EC2, S3, RDS, VPC, and more.
+This repository contains Terraform configurations for various AWS services. These configurations are designed to help AWS solution architects quickly set up and manage AWS infrastructure using Terraform. Services covered include EC2, S3, RDS, VPC,DB, and more.
 
 ## Getting Started
 
