@@ -1,0 +1,48 @@
+name: Versioning
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions: 
+  contents: write
+  packages: write
+  pull-requests: write
+  issues: write
+  actions: write
+
+jobs:
+
+  semantic_release:
+    needs: build-and-push  # Uncomment this to ensure sequential execution
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Important for semantic-release
+          persist-credentials: false # Important for semantic-release
+          
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.8.1'
+          
+      - name: Cache Node.js dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: node-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            node-${{ runner.os }}-
+            
+      - name: Install dependencies
+        run: npm install -g semantic-release @semantic-release/changelog @semantic-release/git
+        
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Add this for better compatibility
+        run: npx semantic-release
