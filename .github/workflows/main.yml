@@ -16,7 +16,6 @@ permissions:
 jobs:
 
   semantic_release:
-    needs: build-and-push  # Uncomment this to ensure sequential execution
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
